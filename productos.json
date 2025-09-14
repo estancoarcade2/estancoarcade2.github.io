@@ -1,0 +1,16 @@
+[
+  {"id": 1, "nombre": "Producto 1", "img": "img/1.webp", "descripcion": ""},
+  {"id": 2, "nombre": "Producto 2", "img": "img/2.webp", "descripcion": ""},
+  {"id": 3, "nombre": "Producto 3", "img": "img/3.webp", "descripcion": ""},
+  {"id": 4, "nombre": "Producto 4", "img": "img/4.webp", "descripcion": ""},
+  {"id": 5, "nombre": "Producto 5", "img": "img/5.webp", "descripcion": ""},
+  {"id": 6, "nombre": "Producto 6", "img": "img/6.webp", "descripcion": ""},
+  {"id": 7, "nombre": "Producto 7", "img": "img/7.webp", "descripcion": ""},
+  {"id": 8, "nombre": "Producto 8", "img": "img/8.webp", "descripcion": ""},
+  {"id": 9, "nombre": "Producto 9", "img": "img/9.webp", "descripcion": ""},
+  {"id": 10, "nombre": "Producto 10", "img": "img/10.webp", "descripcion": ""},
+  {"id": 11, "nombre": "Producto 11", "img": "img/11.webp", "descripcion": ""},
+  {"id": 12, "nombre": "Producto 12", "img": "img/12.webp", "descripcion": ""},
+  {"id": 13, "nombre": "Producto 13", "img": "img/13.webp", "descripcion": ""},
+  {"id": 14, "nombre": "Producto 14", "img": "img/14.webp", "descripcion": ""}
+]
