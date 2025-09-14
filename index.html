@@ -1,13 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>estancoarcade2.github.io</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="icon" href="img/icon-32x32.webp" sizes="32x32">
+    <link rel="icon" href="img/icon-192x192.webp" sizes="192x192">
 
 </head>
+
 <body>
-    <h1>bienvenido a Estanco Arcade 2</h1>
+    <header class="fixed top-0 left-0 w-full bg-white shadow z-50">
+        <div class="max-w-2xl mx-auto flex items-center justify-between px-4 py-2">
+            <div class="flex items-center space-x-2">
+                <img src="img/icon-32x32.webp" alt="Logo" class="w-8 h-8 rounded">
+                <span class="font-bold text-xl text-red-900">Estanco Arcade 2</span>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-4">
+                    <li>
+                        <a class="block px-3 py-2 rounded transition text-red-900  hover:text-yellow-700/90 font-medium" href="#">Inicio</a>
+                    </li>
+                    <li>
+                        <a class="block px-3 py-2 rounded transition text-red-900  hover:text-yellow-700/90 font-medium" href="#productos">Productos</a>
+                    </li>
+                    <li>
+                        <a class="block px-3 py-2 rounded transition text-red-900  hover:text-yellow-700/90 font-medium" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="p-2 rounded text-red-900 hover:bg-yellow-100 focus:outline-none" aria-label="Abrir menú">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <nav id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+            <ul class="flex flex-col space-y-2 px-4 py-2">
+                <li><a class="block px-3 py-2 rounded transition text-red-900 hover:bg-yellow-100 hover:text-yellow-700 font-medium" href="/">Inicio</a></li>
+                <li><a class="block px-3 py-2 rounded transition text-red-900 hover:bg-yellow-100 hover:text-yellow-700 font-medium" href="#productos">Productos</a></li>
+                <li><a class="block px-3 py-2 rounded transition text-red-900 hover:bg-yellow-100 hover:text-yellow-700 font-medium" href="#contacto">Contacto</a></li>
+                <li><a class="block px-3 py-2 rounded transition text-red-900 hover:bg-yellow-100 hover:text-yellow-700 font-medium" href="#sobre-nosotros">Sobre Nosotros</a></li>
+            </ul>
+        </nav>
+        <script>
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        </script>
+    </header>
+    <main class="pt-20 pb-12 px-4 max-w-2xl mx-auto">
+        <div class="flex flex-col items-center">
+            <img src="img/0.webp" alt="Estanco Arcade fachada" class="rounded-lg shadow-lg w-full max-w-md mb-6 object-cover">
+            <h1 class="text-3xl font-bold text-red-900 mb-4 text-center">Tu estanco de confianza en Arcade</h1>
+            <p class="text-gray-700 mb-4 text-center">
+                Ubicado en pleno centro de Arcade, nuestro estanco es un
+                punto de referencia para vecinos y visitantes. Nos dedicamos
+                a la venta de tabaco, artículos para fumadores, mecheros,
+                papel de liar, filtros, así como una cuidada selección de
+                productos relacionados. Además, ofrecemos servicios
+                complementarios como la venta de sellos, recargas móviles y
+                otros productos de conveniencia.
+            </p>
+            <p class="text-gray-700 text-center">
+                Nuestro compromiso es ofrecer un trato cercano y
+                profesional, con un servicio ágil y atención personalizada. Nos
+                esforzamos por mantener un ambiente agradable y cercano,
+                en el que cada cliente se sienta bienvenido y bien atendido.
+                Ya seas cliente habitual o estés de paso por Arcade, te
+                invitamos a visitarnos y descubrir todo lo que podemos
+                ofrecerte. Te esperamos en la calle Xosé Solla, con la mejor
+                atención y los productos de siempre.
+            </p>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 py-6 mt-8 text-center text-sm text-gray-600">
+        <div class="max-w-2xl mx-auto px-4">
+            <div class="mb-2">
+                <span class="font-semibold text-red-900">Contacto:</span>
+                <span class="ml-2">estancoarcade@email.com</span>
+            </div>
+            <div class="mb-2">
+                <span class="font-semibold text-red-900">Teléfono:</span>
+                <span class="ml-2">+34 000 000 000</span>
+            </div>
+            <div>
+                <span class="font-semibold text-red-900">Dirección:</span>
+                <span class="ml-2">Calle Xosé Solla, Arcade</span>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
