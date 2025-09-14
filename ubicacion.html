@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos - Estanco Arcade</title>
+    <title>Contacto - Estanco Arcade</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="icon" href="img/icon-32x32.webp" sizes="32x32">
     <link rel="icon" href="img/icon-192x192.webp" sizes="192x192">
 </head>
+
 <body>
-     <header class="fixed top-0 left-0 w-full bg-white shadow z-50">
+    <header class="fixed top-0 left-0 w-full bg-white shadow z-50">
         <div class="max-w-2xl mx-auto flex items-center justify-between px-4 py-2">
             <div class="flex items-center space-x-2">
                 <img src="img/icon-32x32.webp" alt="Logo" class="w-8 h-8 rounded">
@@ -60,48 +62,15 @@
             });
         </script>
     </header>
-    <main class="pt-24 pb-12 px-4 max-w-2xl mx-auto">
-        <h1 class="text-3xl font-bold text-red-900 mb-6 text-center">Productos en venta</h1>
-        <div id="productos-list" class="grid grid-cols-1 sm:grid-cols-2 gap-6"></div>
-        <script>
-        let productos = [];
-        async function fetchProductos() {
-            try {
-                const res = await fetch('productos.json');
-                if (!res.ok) throw new Error('No se pudo cargar productos.json');
-                productos = await res.json();
-                console.log('Productos cargados:', productos);
-                renderProductos();
-            } catch (err) {
-                console.error('Error cargando productos:', err);
-            }
-        }
-        function renderProductos() {
-            const list = document.getElementById('productos-list');
-            list.innerHTML = '';
-            productos.forEach(p => {
-                const card = document.createElement('div');
-                card.className = 'bg-white rounded-lg shadow p-4 flex flex-col items-center';
-                const nombre = document.createElement('h2');
-                nombre.className = 'text-red-900 font-semibold mb-2 text-center';
-                nombre.textContent = p.nombre;
-                card.appendChild(nombre);
-                const img = document.createElement('img');
-                img.src = p.img;
-                img.alt = p.nombre;
-                img.className = 'w-full h-48 object-contain bg-gray-50 rounded mb-2';
-                card.appendChild(img);
-                const desc = document.createElement('p');
-                desc.className = 'text-gray-700 text-center text-sm';
-                desc.textContent = p.descripcion || 'Sin descripción';
-                card.appendChild(desc);
-                list.appendChild(card);
-            });
-        }
-        fetchProductos();
-        </script>
+    <main class="pt-20 px-4 max-w-2xl mx-auto">
+        <div class="w-full rounded overflow-hidden">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2949.031820762951!2d-8.608338920509647!3d42.34184493421272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2f7b22f2ecb39d%3A0xd54a7b0925e1b1ab!2sEstanco%20Arcade%202%20Abel!5e0!3m2!1ses!2ses!4v1757887231219!5m2!1ses!2ses"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </main>
-     <footer class="bg-white border-t border-gray-200 py-6 mt-8 text-center text-sm text-gray-600">
+    <footer class="bg-white border-t border-gray-200 py-6 mt-8 text-center text-sm text-gray-600">
         <div class="max-w-2xl mx-auto px-4">
             <div class="mb-2">
                 <span class="font-semibold text-red-900">Teléfono:</span>
@@ -118,4 +87,5 @@
         </div>
     </footer>
 </body>
+
 </html>
